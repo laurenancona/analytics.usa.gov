@@ -1,5 +1,5 @@
 
 # The staging site uses 18F Pages, a prefix, and pulls from production data.
-url: https://pages.18f.gov/analytics.usa.gov
-baseurl: /analytics.usa.gov
-data_url: https://analytics.usa.gov/data/live
+url: https://pages.18f.gov/analytics.phila.gov
+baseurl: /analytics.phila.gov
+data_url: http://analytics.phila.gov/data

@@ -30,24 +30,24 @@ collections:
     permalink: /:path/
 
 # Site title and description 
-title: "analytics.usa.gov | The US government's web traffic."
-description: "Official data on web traffic to hundreds of US federal government websites. Published by the Digital Analytics Program."
+title: "analytics.phila.gov | The City of Philadelphia's government's web traffic."
+description: "Official data on web traffic to City of Philadelphia government websites. Published by the Digital Analytics Program."
 
 # Site's own URL
-url: https://analytics.usa.gov 
+url: http://analytics.phila.gov 
 
 # Default dropdown title, will not appear if there are no sub-pages
 dropdown_title: All Participating Websites
 
 # Default data url
-data_url: https://analytics.usa.gov/data/live
+data_url: http://analytics.phila.gov/data
 
 # GitHub information
-org_name: GSA
-repo_name: analytics.usa.gov
+org_name: CityofPhiladelphia
+repo_name: analytics.phila.gov
 
 # twitter information
-twitter: usgsa
+twitter: PhilaGovData
 
 sass:
   sass_dir: sass
