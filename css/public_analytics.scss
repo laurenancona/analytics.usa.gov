@@ -38,7 +38,7 @@ $mobile-small-screen:  new-breakpoint(max-width  500px   1);
 // Fonts & Colors:
 
 $red: #921B1E;
-$blue: #022945;
+$blue: #2176d2;
 
 $light_gray: #f9f9f9;
 $dark_gray: #222;
@@ -47,8 +47,8 @@ $medium_gray: #555;
 // used only for borders
 $gray: #e4e4e4;
 
-$light_blue: #3A96B7;
-$dark_blue: #36435A;
+$light_blue: #96c9ff;
+$dark_blue: #2176d2;
 $white: #fff;
 $background_color: $light_gray;
 $container_background: $white;
@@ -56,7 +56,7 @@ $border_width: 1px;
 
 $bold_weight: 600;
 
-$data: $light_blue;
+$data: #f99300;
 
 // Other Setup:
 $border_radius: 5px;
@@ -459,6 +459,7 @@ section {
 #current_visitors {
   font-weight: $bold_weight;
   text-align: center;
+  color: $dark_gray;
 }
 
 #top_100_table {

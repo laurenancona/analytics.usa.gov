@@ -31,7 +31,7 @@ collections:
 
 # Site title and description 
 title: "analytics.phila.gov | The City of Philadelphia's government's web traffic."
-description: "Official data on web traffic to City of Philadelphia government websites. Published by the Digital Analytics Program."
+description: "Official data on web traffic to City of Philadelphia government websites. Published by the Office of Innovation and Technology."
 
 # Site's own URL
 url: http://analytics.phila.gov 
@@ -40,7 +40,7 @@ url: http://analytics.phila.gov
 dropdown_title: All Participating Websites
 
 # Default data url
-data_url: http://analytics.phila.gov/data
+data_url: http://analytics.phila.gov/testdata
 
 # GitHub information
 org_name: CityofPhiladelphia

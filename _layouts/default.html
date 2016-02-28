@@ -6,29 +6,38 @@
 
     Hi! Welcome to our source code.
 
-    This dashboard uses data from the Digital Analytics Program, a US
-    government team inside the General Services Administration, an independent
-    federal agency.
+    This dashboard uses code developed by the Digital Analytics Program, a US government team inside the General Services Administration, an independent federal agency. It was built largely by 18F, another GSA team.
 
+    Beginning in December 2014, the City of Philadelphia's Office of Innovation and Technology has been working to integrate city-wide web analytics in the same way. Much like the our compatriots at the federal level, it is a work in progress, with
+    over 56 departments to coordinate
 
-    For a detailed tech breakdown of how 18F and friends built this site:
-
+    For a detailed tech breakdown of how 18F built this site:
     https://18f.gsa.gov/2015/03/19/how-we-built-analytics-usa-gov/
+
+    And read the City of Philadelphia's web reporting initiative here:
+    http://phillyinnovates.com/2015/04/20/toward-unified-digital-analytics/
+
+    In part, we'll be using these analytics to help inform our iterative, public effort to redesign the city's website to better serve the needs of residents. Follow our progress at:
+    http://alpha.phila.gov
 
 
     This is a fully open source project, and your contributions are welcome.
 
-    Frontend static site: https://github.com/GSA/analytics.usa.gov
-    Backend data reporting: https://github.com/18F/analytics-reporter
+    Front-end static site: https://github.com/CityofPhiladelphia/analytics.phila.gov
+    Backend data reporting: https://github.com/18f/analytics-reporter
 
     -->
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="google-site-verification" content="NjbZn6hQe7OwV-nTsa6nLmtrOUcSGPRyFjxm5zkmCcg" />
 
     <link rel="stylesheet" href="{{ site.baseurl }}/css/public_analytics.css">
-    <link rel="icon" type="image/x-icon" href="images/analytics-favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="http://cityofphiladelphia.github.io/patterns/images/favicon.ico">
+
+    <!-- Swiftype Meta Tags -->
+    <!-- TODO: Update these values for the phila.gov search engine. -->
+    <meta class="swiftype" name="analytics.phila.gov" data-type="string" content="Application" />
+    <meta class="swiftype" name="published_at" data-type="date" content="2016-02-26" />
 
     <meta name="twitter:site" content="@{{ site.twitter }}">
     <meta name="twitter:creator" content="@{{ site.twitter }}">
@@ -56,10 +65,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="{{ site.baseurl }}/css/google-fonts.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="http://cityofphiladelphia.github.io/patterns/css/patterns.css">
+    <style>
+      /*Overrides for patterns*/
+      .label {
+        background: none;
+        color: #444;
+      }
+      .page-title {
+        text-decoration: none!important;}
+    </style>
   </head>
 
   <body>
-    
+    <!--add phila.gov analytics-->
     {% include tag-manager.html %}
   
     <!-- Initalize title and data source variables -->
@@ -70,10 +93,78 @@
       {% capture data_url %}{{ page.data_url }}{% endcapture %}
       {% capture page_title %} - {{ page.name }}{% endcapture %}
     {% endif %}
-    <header id="usa_dot_gov_header">
+    <div class="full" id="application">
+      <div class="row expanded">
+        <div class="small-24 column">
+          <div class="full" id="application">
+            <!-- Begin header -->
+<!--
+            <header data-swiftype-index='false' class="site-header app" role="banner">
+              <div class="row">
+                <div class="small-24 columns">
+                  <a href="http://alpha.phila.gov/" class="logo">
+                    <img src="http://cityofphiladelphia.github.io/patterns/images/city-of-philadelphia-white.png">
+                  </a>
+-->
+<!--
+                  <div class="page-title-container">
+                    <a href="#/">
+                      <h2 class="page-subtitle">An optional subtitle</h2>
+                    
+                      <h1>
+                        <a href="/" class="anlytics-title site-title"><b>analytics</b>.phila.gov</a>
+                        {% if site.agencies.size > 0 %}
+                        <div id="agency-selector-wrap">
+                          &nbsp-
+                          <select class="agency-selector">
+                            <option value="{{site.baseurl}}/">{{site.dropdown_title}}</option>
+                            {% for agency in site.agencies %}
+                            <option value="{{site.baseurl}}{{agency.url}}">{{agency.name}}</option>
+                            {% endfor %}
+                          </select>
+                        </div>
+                        {% endif %}
+                      </h1>
+
+                      <a id="about" href="#explanation" class="site-nav">About this site</a>
+                      {% if site.agencies.size > 0 %}
+                      <div id="agency-selector-wrap-small">
+                        <select class="agency-selector">
+                          <option value="{{site.baseurl}}/">{{site.dropdown_title}}</option>
+                          {% for agency in site.agencies %}
+                          <option value="{{site.baseurl}}{{agency.url}}">{{agency.name}}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                      {% endif %}
+                    </a>
+                  </div>
+-->
+<!--
+                </div>
+              </div>
+-->
+<!--
+              <div class="row">
+                <div class="small-20 small-centered columns">
+                  <nav>
+                    <a class="button" href="#/">Button 1</a>
+                    <a class="button" href="#/">Button 2</a>
+                  </nav>
+                </div>
+              </div>
+-->
+<!--            </header>-->
+            
+            
+    <header id="usa_dot_gov_header" data-swiftype-index='false' accesskey=""class="site-header app">
       <div class="header_container">
         <h1>
-          <a href="/" class="external-link anlytics-title"><b>analytics</b>.phila.gov</a>
+          <a href="http://alpha.phila.gov/" class="logo">
+            <img src="http://cityofphiladelphia.github.io/patterns/images/city-of-philadelphia-white.png">
+          </a>
+          <div class="page-title-container">
+          <a href="/" class="external-link anlytics-title site-title"><b>analytics</b>.phila.gov</a>
           {% if site.agencies.size > 0 %}
           <div id="agency-selector-wrap">
             &nbsp-
@@ -98,10 +189,12 @@
             </select>
           </div>
           {% endif %}
+        </div>
       </div>
 
-      <div id="color_bar"></div>
     </header>
+    <div id="color_bar"></div>
+
 
     <div class="container">
       <!--
@@ -146,9 +239,11 @@
           </svg>
         </section>
 
+<!--
         <section class="section_headline">
           <h3>Visits in the Past 90 Days</h3>
         </section>
+-->
 
         <section class="section_subheadline">
           There were <span id="total_visitors" class="data">...</span> visits over the past 90 days.
@@ -157,7 +252,7 @@
         <section id="devices" class="three_column"
           data-block="devices"
           data-source="{{ data_url }}/devices.json">
-          <h4>Devices</h4>
+          <h4 class="">Devices</h4>
           <figure id="chart_device_types">
             <div class="data bar-chart">
             </div>
@@ -165,7 +260,7 @@
         </section>
 
         <section id="browsers" class="three_column">
-          <h4>Browsers</h4>
+          <h4 class="">Browsers</h4>
 
           <figure id="chart_browsers"
             data-block="browsers"
@@ -178,14 +273,14 @@
             data-block="ie"
             data-source="{{ data_url }}/ie.json"
             data-scale-to-parent="true">
-            <h4>Internet Explorer</h4>
+            <h4 class="">Internet Explorer</h4>
             <div class="data bar-chart">
             </div>
           </figure>
         </section>
 
         <section id="operating_systems" class="three_column">
-          <h4>Operating Systems</h4>
+          <h4 class="">Operating Systems</h4>
 
           <figure id="chart_os"
             data-block="os"
@@ -198,7 +293,7 @@
             data-block="windows"
             data-source="{{ data_url }}/windows.json"
             data-scale-to-parent="true">
-            <h4>Windows</h4>
+            <h4 class="">Windows</h4>
             <div class="data bar-chart">
             </div>
           </figure>
@@ -208,21 +303,21 @@
         <div style="clear: both"></div>
 
         <section class="section_headline">
-          <h3>Visitor Locations Right Now</h3>
+          <h3 class="contrast">Visitor Locations Right Now</h3>
         </section>
 
-        <section id="cities" class="three_column"
+        <section id="cities" class="two_column"
           data-block="cities"
           data-source="{{ data_url }}/top-cities-realtime.json">
-          <h4>Cities</h4>
+          <h4 class="">Cities</h4>
           <figure id="chart_top-cities-90-days">
             <div class="data bar-chart">
             </div>
           </figure>
         </section>
 
-        <section id="countries" class="three_column">
-          <h4>Countries</h4>
+        <section id="countries" class="two_column">
+          <h4 class="">Countries</h4>
 
           <figure id="chart_us"
             data-block="countries"
@@ -231,13 +326,15 @@
             </div>
           </figure>
 
+<!--
           <figure id="chart_countries"
             data-block="international_visits"
             data-source="{{ data_url }}/top-countries-realtime.json">
-            <h4>International</h4>
+            <h4 class="alternate divide">International</h4>
             <div class="data bar-chart">
             </div>
           </figure>
+-->
         </section>
 
       </div>
@@ -246,7 +343,7 @@
         <section id="top_100_table">
 
           <!-- see: http://heydonworks.com/practical_aria_examples/ -->
-          <h3>Top <span id="top_table_type">Pages</span></h3>
+          <h3 class="contrast mbm">Top <span id="top_table_type">Pages</span></h3><br>
           <ul class="pills" role="tablist">
             <li><a role="tab" data-type="Pages" aria-selected="true" href="#top-pages-realtime" class="site-nav">Now</a></li>
             <li><a role="tab" data-type="Domains" href="#top-pages-7-days" class="site-nav">7 Days</a></li>
@@ -257,10 +354,10 @@
             data-block="top-pages-realtime"
             data-source="{{ data_url }}/top-pages-realtime.json"
             data-refresh="15">
-            <h5><em>
+            <p><em>
               People on a <strong>single, specific page</strong> now.  We only count pages with at least 10 people on the page.
               <a href="{{ data_url }}/all-pages-realtime.csv">Download the full dataset.</a>
-            </em></h5>
+            </em></p>
             <div class="data bar-chart">
             </div>
           </figure>
@@ -268,7 +365,7 @@
           <figure class="top-pages" id="top-pages-7-days" role="tabpanel"
             data-block="top-pages"
             data-source="{{ data_url }}/top-domains-7-days.json">
-            <h5><em>Visits over the last week to <strong>domains</strong>, including traffic to all pages within that domain.</em></h5>
+            <p><em>Visits over the last week to <strong>domains</strong>, including traffic to all pages within that domain.</em></p>
             <div class="data bar-chart">
             </div>
           </figure>
@@ -276,10 +373,10 @@
           <figure class="top-pages" id="top-pages-30-days" role="tabpanel"
             data-block="top-pages"
             data-source="{{ data_url }}/top-domains-30-days.json">
-            <h5><em>
+            <p><em>
               Visits over the last month to <strong>domains</strong>, including traffic to all pages within that domain. We only count pages with at least 1,000 visits in the last month.
               <a href="{{ data_url }}/all-domains-30-days.csv">Download the full dataset.</a>
-            </em></h5>
+            </em></p>
             <div class="data bar-chart">
             </div>
           </figure>
@@ -289,7 +386,7 @@
         <section id="top_downloads_table">
 
           <h3>Top Downloads</h3>
-          <h5><em>Total file downloads yesterday on government domains.</em></h5>
+          <p><em>Total file downloads yesterday on government domains.</em></p>
           <figure id="top-downloads"
             data-block="top-downloads"
             data-source="{{ data_url }}/top-downloads-yesterday.json">
@@ -304,11 +401,11 @@
 
         <h3>About this Site</h3>
         <p>
-          This data provides a window into how people are interacting with the government online. The data comes from a unified Google Analytics account for U.S. federal government agencies known as the <a href="https://www.digitalgov.gov/services/dap/" class="external-link">Digital Analytics Program</a>. This program helps government agencies understand how people find, access, and use government services online. The program <a href="https://www.digitalgov.gov/services/dap/common-questions-about-dap-faq/#part-4" class="external-link">does not track individuals</a>, and <a href="https://support.google.com/analytics/answer/2763052?hl=en" class="external-link">anonymizes the IP addresses</a> of visitors.
+          This data provides a window into how people are interacting with the city online. The data comes from a unified Google Analytics account for City of Philadelphia offices and agencies. This program helps city employees understand how people find, access, and use city services online. The program does not track individual users, and anonymizes the IP addresses of visitors.
         </p>
 
         <p>
-          Not every government website is represented in this data. Currently, the Digital Analytics Program collects web traffic from around <a href="https://analytics.usa.gov/data/live/second-level-domains.csv" class="external-link">400 executive branch government domains</a>, across <a href="https://analytics.usa.gov/data/sites.csv" class="external-link">over 4000 total websites</a>, including every cabinet department. We continue to pursue and add more sites frequently; to add your site, <a href="mailto:DAP@support.digitalgov.gov" class="external-link">email the Digital Analytics Program</a>.
+          Not every city website is represented in this data. Currently, the dashboard collects web traffic from almost 30 city sites. There are many city agencies, departments, offices, and non-phila.gov domains yet to include. We continue to pursue and add more sites frequently; to add your agency or office's site, <a href="mailto:lauren.ancona@phila.gov">email the Office of Innovation and Technology</a>.
         </p>
 
         <p>
@@ -316,11 +413,13 @@
         </p>
 
         <p>
-          This open source project is in the public domain, which means that this website and its data are free for you to use without restriction. You can find the <a href="https://github.com/GSA/analytics.usa.gov" class="external-link">code for this website</a> and the <a href="https://github.com/18F/analytics-reporter" class="external-link">code behind the data collection</a> on GitHub.
+          This dashboard uses code developed by the <a href="https://www.digitalgov.gov/services/dap/">Digital Analytics Program</a>, a US government team inside the <a href="http://www.gsa.gov">General Services Administration</a>, an independent federal agency. It was built largely by <a href="https://18f.gsa.gov/">18F</a>, another GSA team.
+
+          This open source project is in the public domain, which means that this website and its data are free for you to use without restriction. You can find the <a href="https://github.com/CityofPhiladelphia/analytics.phila.gov">code for this website</a> and the <a href="https://github.com/18f/analytics-reporter">code behind the data collection</a> on GitHub.
         </p>
 
         <p>
-          We plan to expand the data made available here. If you have any suggestions, or spot any issues or bugs, please <a href="https://github.com/GSA/analytics.usa.gov/issues" class="external-link">open an issue on GitHub</a> or contact the <a href="mailto:DAP@support.digitalgov.gov" class="external-link">Digital Analytics Program</a>.
+          We plan to expand the data made available here. If you have any suggestions or spot any issues or bugs, please <a href="https://github.com/CityofPhiladelphia/analytics.phila.gov/issues">open an issue on GitHub</a> or <strong><a class="lightbox-51087511490149" style="cursor:pointer;">leave us feedback</a></strong>.
         </p>
       </section>
 
@@ -397,8 +496,5 @@
   </script>
 
   <script src="{{ site.baseurl }}/js/index.js"></script>
-  
-  <!-- report to oneself -->
-  <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA&exts=json"></script>
    
 </html>
