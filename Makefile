@@ -1,4 +1,4 @@
-DEPLOY_BUCKET=analytics.phila.gov/testdata
+DEPLOY_BUCKET=analytics.phila.gov/test
 
 production:
 	bundle exec jekyll build
