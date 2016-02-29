@@ -254,11 +254,12 @@
           .value(function(d) { return +d.total_events; })
           .label(function(d) {
             return [
-              '<span class="name"><a class="top-download-page" target="_blank" href=http://', d.page, '>', d.page_title, '</a></span> ',
+              '<span class="name"><a class="top-download-page" target="_blank" href="http://', d.page, '">', d.page_title, '</a></span> ',
               '<span class="domain" >', formatURL(d.page), '</span> ',
               '<span class="divider">/</span> ',
-              '<span class="filename"><a class="top-download-file" target="_blank" href=', d.event_label, '>',
-              formatFile(d.event_label), '</a></span>'
+              '<span class="filename"><a class="top-download-file" target="_blank" href="http://', d.page, '">',
+              d.event_label, '</a></span>'
+//              formatFile(d.event_label), '</a></span>'
             ].join('');
           })
           .scale(function(values) {

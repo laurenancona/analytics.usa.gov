@@ -1,4 +1,4 @@
-DEPLOY_BUCKET=18f-dap
+DEPLOY_BUCKET=analytics.phila.gov/testdata
 
 production:
 	bundle exec jekyll build

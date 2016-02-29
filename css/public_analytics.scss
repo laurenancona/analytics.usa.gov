@@ -37,18 +37,28 @@ $mobile-small-screen:  new-breakpoint(max-width  500px   1);
 
 // Fonts & Colors:
 
+// Phila.gov Pattern Colors:
+
+$ben-franklin-blue: #2176d2;
+$ben-franklin-light: #96c9ff;
+$bell-yellow: #f3c613;
+$flyers-orange: #f99300;
+$fairmount-green: #58c04d;
+$ghost-gray: #f0f0f0;
+$sidewalk: #cfcfcf;
+$medium-gray: #a1a1a1;
+$dark-gray: #444444;
+
 $red: #921B1E;
 $blue: #2176d2;
 
-$light_gray: #f9f9f9;
-$dark_gray: #222;
-$medium_gray: #555;
+$light_gray: $ghost-gray;
 
 // used only for borders
-$gray: #e4e4e4;
+$gray: $sidewalk;
 
-$light_blue: #96c9ff;
-$dark_blue: #2176d2;
+$light_blue: $ben-franklin-light;
+$dark_blue: $ben-franklin-blue;
 $white: #fff;
 $background_color: $light_gray;
 $container_background: $white;
@@ -56,7 +66,7 @@ $border_width: 1px;
 
 $bold_weight: 600;
 
-$data: #f99300;
+$data: $ben-franklin-light;
 
 // Other Setup:
 $border_radius: 5px;
@@ -83,6 +93,10 @@ a, a:visited {
 
 .anlytics-title {
   float:left;
+}
+
+small {
+  line-height: .4em;
 }
 
 .agency-selector {
@@ -221,7 +235,7 @@ header {
       text-decoration: none;
     }
     a:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
     @include media($small-screen)  {
       @include span-columns(1);
@@ -243,7 +257,7 @@ header {
       padding-bottom: 10px;
     }
   }
-  #about:hover {text-decoration: underline;}
+  #about:hover {text-decoration: none;}
 }
 
 section {
@@ -262,7 +276,7 @@ section {
 }
 
 #realtime {
-  color: $dark_blue;
+  color: $dark_gray;
   @include media($small-screen)  {
     font-size: 12px;
   }
@@ -270,13 +284,15 @@ section {
 
 .container {
   @include responsive_container;
-  border-left: 1px solid $gray;
-  border-right: 1px solid $gray;
-  border-bottom: 1px solid $gray;
+//  border-left: 1px solid $gray;
+//  border-right: 1px solid $gray;
+//  border-bottom: 1px solid $gray;
   background: $white;
 }
 
 #main_data {
+
+  border-right: 6px solid $sidewalk;
 
   @include span-columns(9);
   @include media($small-screen)  {
@@ -288,25 +304,25 @@ section {
 .visits_today {
   h3 {
     display: block;
-    height: 2.5rem;
-    margin-bottom: 0;
+//    height: 2.5rem;
+//    margin-bottom: 0;
   }
   h4 {
     display: block;
     text-align: right;
-    margin-top: -2.5rem;
-    font-size: 1.0em;
+    margin-top: .5rem;
+    font-size: .8em;
     color: $dark_gray;
   }
+  
 }
 
 #secondary_data {
-  border-left: 1px solid $gray;
 
   @include span-columns(5);
   @include media($small-screen)  {
     @include span-columns(1);
-    border-top: 1px solid $gray;
+//    border-top: 1px solid $gray;
     border-left: none;
     border-right: none;
   }
@@ -321,10 +337,10 @@ section {
 
 #explanation,
 #data_download {
-  border-top: $border_width solid $gray;
-  line-height: 1.6;
+//  border-top: $border_width solid $gray;
+  line-height: 1.3;
 
-  h4 {font-size: 90%}
+//  h4 {font-size: 90%}
 
   ul {
     font-size: 80%;
@@ -359,8 +375,8 @@ section {
 }
 
 .section_headline {
-  padding: 0.1em 1em;
-  border-top: 1px solid $gray;
+  padding: 1em;
+//  border-top: 1px solid $gray;
   @include media($small-screen)  {
     border-bottom: none;
   }
@@ -368,12 +384,16 @@ section {
 
 .section_subheadline {
   padding: 0.5em 1em;
-  border-top: 1px solid $gray;
+//  border-top: 1px solid $gray;
   text-align: center;
   font-size: 1.5em;
   #total_visitors {
     font-weight: $bold_weight;
   }
+}
+
+.two_column {
+  @include span-columns(4.5 of 9);
 }
 
 .three_column {
@@ -382,7 +402,7 @@ section {
   @include media($small-screen)  {
     @include span-columns(1);
     border-left: none;
-    border-top: 1px solid $gray;
+//    border-top: 1px solid $gray;
   }
   h4 {
     text-align: center;
@@ -396,6 +416,7 @@ section {
 }
 
 #realtime {
+  color: $dark-gray;
   text-align: center;
   padding-top: 0em;
   padding-bottom: 2em;
@@ -453,7 +474,11 @@ section {
   margin: 0;
   width: 100%;
   height: auto;
-  max-height: 300px;
+  max-height: 300px;  
+  g.series > g.bar {
+    background: $ben-franklin-light;
+  }
+
 }
 
 #current_visitors {
@@ -463,8 +488,9 @@ section {
 }
 
 #top_100_table {
+  padding-top: 0px;
   h3 {
-    @include span-columns(2 of 5);
+//    @include span-columns(2 of 5);
   }
 }
 
@@ -476,7 +502,7 @@ section {
 
 #top_100_table, #top_downloads_table {
   h3 {
-    font-size: 1.0em;
+//    font-size: 1.0em;
   }
   h5 {
     color: $dark_gray;
@@ -491,16 +517,16 @@ section {
 }
 
 figure {
-  margin: 0;
+  margin: 0px!important;
 }
 
 ul.pills {
   @include clearfix;
-  @include span-columns(3 of 5);
+//  @include span-columns(3 of 5);
   display: inline-block;
 
-  border-right: 1px solid $gray;
-  border-left: 1px solid $gray;
+  border-right: 1px solid $flyers-orange;
+  border-left: 1px solid $flyers-orange;
 
   li {
     width: 33.3333%;
@@ -514,34 +540,37 @@ ul.pills {
   }
 
   & {
-    margin: .60rem 0;
+    margin: .30rem 0;
   }
 
   & > li {
     float: left;
 
     & > a {
-      color: $dark_blue;
+      color: $flyers-orange;
       background: $white;
+      font-family: 'montserrat', sans-serif;
       width: 100%;
       text-align: center;
       font-weight: 300;
-      font-size: 0.8em;
+      font-size: 0.7em;
       display: inline-block;
-      padding: .32em 0em;
+      padding: .52em 0em;
       text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: .1em;
 
-      border-top: 1px solid $gray;
-      border-bottom: 1px solid $gray;
-      border-right: 1px solid $gray;
+      border-top: 1px solid $flyers-orange;
+      border-bottom: 1px solid $flyers-orange;
+      border-right: 1px solid $flyers-orange;
 
       &:hover {
-        text-decoration: underline;
+        text-decoration: none;
       }
 
       &[aria-selected='true'] {
         color: #fff;
-        background: $light_blue;
+        background: $flyers-orange;
       }
     }
 
@@ -554,13 +583,13 @@ ul.pills {
 .bar-chart {
   margin: 1rem 0;
   position: relative;
-  font-size: 90%;
+//  font-size: 90%;
 
   .bar-chart {
-    font-size: 80%;
+    font-size: 90%;
 
     .bin {
-      margin-left: 2em;
+      margin-left: 1em;
       margin-bottom: 0rem;
 
       .bar {
@@ -579,7 +608,7 @@ ul.pills {
       content: " ";
       display: block;
       position: absolute;
-      background: #f9f9f9;
+      background: $ghost-gray;
       top: 0;
       left: 100%;
       width: 1000px;
@@ -607,18 +636,19 @@ ul.pills {
     text-overflow: ellipsis;
 
     a {
-      text-decoration: none;
+      text-decoration: none; 
+      font-weight: normal!important;
     }
     a:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 
   .value {
     text-align: right;
-    height: 1rem;
+    height: 1.5rem;
     white-space: nowrap;
-    margin-top: -1.5rem;
+    margin-top: -2rem;
     margin-bottom: .45rem;
   }
 }
@@ -631,11 +661,11 @@ ul.pills {
     display: block;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis!important;
   }
 
   .domain {
-    color: $medium_gray;
+    color: $dark_gray;
   }
 }
 
@@ -654,20 +684,20 @@ g.axis {
 
 .time-series {
   rect {
-    fill: $data;
+    fill: $ben-franklin-light;
     stroke: #fff;
     stroke-width: 1;
   }
 
   text.label {
     fill: $dark_gray;
-    font-size: .6rem;
+    font-size: .8rem;
   }
 }
 
 // nested charts
 figure figure {
-  // margin-left: 2rem;
+   margin-left: 0!important;
 
   h4 {
     display: none;
