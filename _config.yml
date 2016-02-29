@@ -30,11 +30,11 @@ collections:
     permalink: /:path/
 
 # Site title and description 
-title: "analytics.phila.gov | The City of Philadelphia government's web traffic."
+title: "analytics.phila.gov | The City of Philadelphias web traffic."
 description: "Official data on web traffic to City of Philadelphia government websites. Published by the Office of Innovation and Technology."
 
 # Site's own URL
-url: http://analytics.phila.gov/testdata
+url: http://analytics.phila.gov/test
 
 # Default dropdown title, will not appear if there are no sub-pages
 dropdown_title: All Participating Websites
