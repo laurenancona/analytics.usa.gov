@@ -254,7 +254,7 @@
           .value(function(d) { return +d.total_events; })
           .label(function(d) {
             return [
-              '<span class="name"><a class="top-download-page" target="_blank" href="http://', d.page, '">', d.page_title, '</a></span> ',
+              '<span class="name"><a class="top-download-page" target="_blank" href="http://', d.full_url, '">', d.page_title, '</a></span> ',
               '<span class="domain" >', formatURL(d.page), '</span> ',
               '<span class="divider">/</span> ',
               '<span class="filename"><a class="top-download-file" target="_blank" href="http://', d.page, '">',
